@@ -14,6 +14,12 @@ def withWhile(segmentSize, sampleData, Closure code) {
   }
 }
 
+
 def sampleData = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 def segmentSize = 2
-withWhile(3, sampleData) { it -> println it }
+
+println "=== withWhile ==="
+withWhile(3, sampleData) { println it }
+
+println "=== collate ==="
+sampleData.collate(3).each { println it }
